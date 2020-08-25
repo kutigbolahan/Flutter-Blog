@@ -20,6 +20,13 @@ class _MyHomePageState extends State<MyHomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
+            padding: const EdgeInsets.only(left: 25.0, right: 25),
+            child: TextField(),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Padding(
             padding: const EdgeInsets.all(14.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
