@@ -16,6 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [Icon(Icons.more_vert)],
       ),
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -134,8 +135,113 @@ class _MyHomePageState extends State<MyHomePage> {
                               style:
                                   TextStyle(color: Colors.white, fontSize: 12),
                             ),
-                          )
+                          ),
                         ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(14.0),
+              child: Text(
+                'Article of the day',
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+            ),
+            Center(
+              child: Stack(
+                children: [
+                  // Positioned(
+                  //   bottom: 1,
+                  //   left: 4,
+                  //   right: 4,
+                  //   height: 400,
+                  //   child: Container(
+                  //     width: 750,
+                  //     height: 720,
+                  //     // color: Colors.red,
+                  //     child: Card(
+                  //       color: Colors.red,
+                  //     ),
+                  //   ),
+                  // ),
+                  Positioned(
+                    bottom: 10,
+                    left: 7,
+                    right: 7,
+                    child: Container(
+                      width: 250,
+                      height: 220,
+                      // color: Colors.red,
+                      child: Card(
+                        color: Colors.blue[700],
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    // bottom: 10,
+                    child: Container(
+                      width: 270,
+                      height: 210,
+                      child: Card(
+                        // shape: RoundedRectangleBorder(
+                        //   borderRadius: BorderRadius.circular(15.0),
+                        // ),
+                        // elevation: 9,
+                        color: Colors.blue[900],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/italy.jpg',
+                              width: 270,
+                              height: 150,
+                              fit: BoxFit.fill,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Italy',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 15),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.hd,
+                                        color: Colors.white,
+                                        size: 20,
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Icon(
+                                        Icons.bookmark,
+                                        color: Colors.white,
+                                        size: 20,
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Icon(
+                                        Icons.forward,
+                                        color: Colors.white,
+                                        size: 20,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
